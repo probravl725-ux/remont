@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <!-- Позволяет сайту корректно отображаться на экранах телефонов -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Быстрый ремонт телефонов и смартфонов</title>
+  <style>
+    /* Сброс базовых отступов */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Шапка сайта */
+    header {
+      background-color: #1a1a2e;
+      color: #fff;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #00d2ff;
+    }
+
+    .phone-btn {
+      background-color: #00d2ff;
+      color: #1a1a2e;
+      padding: 8px 15px;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    /* Главный баннер (Hero) */
+    .hero {
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      color: #cccccc;
+      margin-bottom: 20px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: linear-gradient(45deg, #00d2ff, #0072ff);
+      color: #fff;
+      padding: 14px 28px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
+    }
+
+    /* Преимущества */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .feature-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .feature-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: #16213e;
+    }
+
+    /* Сетка услуг */
+    .services {
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      color: #1a1a2e;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+    }
+
+    .service-item {
+      background: #fff;
+      padding: 15px 20px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-left: 4px solid #00d2ff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .service-price {
+      font-weight: bold;
+      color: #0072ff;
+    }
+
+    /* Форма заявки */
+    .contact-form {
+      background: #fff;
+      margin: 20px;
+      padding: 25px;
+      border-radius: 12px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: #0072ff;
+      color: #fff;
+      padding: 14px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* Подвал сайта */
+    footer {
+      background: #1a1a2e;
+      color: #888;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.85rem;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Шапка -->
+  <header>
+    <div class="logo">📱 iRepair Pro</div>
+    <a href="tel:+77000000000" class="phone-btn">Позвонить</a>
+  </header>
+
+  <!-- 2. Первый экран (Hero) -->
+  <section class="hero">
+    <h1>Качественный ремонт телефонов от 20 минут</h1>
+    <p>Замена экранов, аккумуляторов и сложных плат с гарантией до 1 года</p>
+    <a href="#order" class="cta-btn">Записаться на ремонт</a>
+  </section>
+
+  <!-- 3. Преимущества -->
+  <section class="features">
+    <div class="feature-card">
+      <h3>🚀 Быстро</h3>
+      <p>80% ремонтов делаем в вашем присутствии</p>
+    </div>
+    <div class="feature-card">
+      <h3>🛡️ Гарантия</h3>
+      <p>Официальная гарантия на запчасти и работу</p>
+    </div>
+    <div class="feature-card">
+      <h3>🔍 Бесплатная диагностика</h3>
+      <p>Даже если вы откажетесь от ремонта</p>
+    </div>
+  </section>
+
+  <!-- 4. Услуги и цены -->
+  <section class="services">
+    <h2 class="section-title">Популярные услуги</h2>
+    <div class="service-list">
+      <div class="service-item">
+        <span>Замена дисплея / стекла</span>
+        <span class="service-price">от 5 000 ₸</span>
+      </div>
+      <div class="service-item">
+        <span>Замена аккумулятора</span>
+        <span class="service-price">от 3 500 ₸</span>
+      </div>
+      <div class="service-item">
+        <span>Ремонт разъема зарядки</span>
+        <span class="service-price">от 3 000 ₸</span>
+      </div>
+      <div class="service-item">
+        <span>Чистка после попадания воды</span>
+        <span class="service-price">от 4 000 ₸</span>
+      </div>
+      <div class="service-item">
+        <span>Восстановление ПО / Прошивка</span>
+        <span class="service-price">от 2 500 ₸</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Форма обратной связи -->
+  <section class="contact-form" id="order">
+    <h2 class="section-title" style="margin-bottom: 15px;">Получить скидку 10%</h2>
+    <form onsubmit="alert('Спасибо за заявку! Мы свяжемся с вами.'); return false;">
+      <div class="form-group">
+        <label>Ваше имя</label>
+        <input type="text" placeholder="Антонов Некита" required>
+      </div>
+      <div class="form-group">
+        <label>Номер телефона</label>
+        <input type="tel" placeholder="+7 (700) 000-00-00" required>
+      </div>
+      <div class="form-group">
+        <label>Проблема</label>
+        <select>
+          <option>Разбит экран</option>
+          <option>Быстро разряжается</option>
+          <option>Не включается</option>
+          <option>Упал в воду</option>
+          <option>Другое</option>
+        </select>
+      </div>
+      <button type="submit" class="submit-btn">Забронировать скидку</button>
+    </form>
+  </section>
+
+  <!-- 6. Подвал -->
+  <footer>
+    <p>© 2026 iRepair Pro. Все права защищены.</p>
+    <p>г. Алматы, ул. Абая 150 | Тел: +7 (700) 000-00-00</p>
+  </footer>
+
+</body>
+</html>
+
